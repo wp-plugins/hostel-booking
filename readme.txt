@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: Phr0sty
 Donate link: http://plugin.hostelbooked.com
-Tags: comments, spam
+Tags: hostel, hostel booking, hostel reservations, booking, reservations, beds
 Requires at least: 3.0.1
 Tested up to: 4.2.2
 Stable tag: 4.2
