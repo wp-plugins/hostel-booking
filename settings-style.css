@@ -1,0 +1,123 @@
+
+/* settings page: */
+
+
+h1 {font-family: "Open Sans", Arial, sans-serif; color:#595959; font-size: 26px; line-height: 1.2; margin: 0 0 50px 0px; font-weight: normal;}
+
+h3 {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#333; font-size: 20px; line-height: 1.2; margin: 30px 0 20px 0px; font-weight: normal;}
+h4 {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#333; font-size: 16px; line-height: 1.2; margin: 0 0 20px 0px; font-weight: normal;}
+h4.inline-header {display: inline-block;}
+
+#interface-container {width: 920px; position: relative;  margin: 40px 0 0 40px;}
+
+
+#shortcode-display {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#333; font-size: 14px; position: absolute; top:0; right:0; margin:10px; }
+
+#settings-form {width:800px; position: relative; display: inline-block;}
+
+#form-table .field {position:relative; margin-right:50px;}
+#form-table .message-area {position:relative; margin-top:5px;}
+#settings-form .label {font-family: Arial, helvetica, sans-serif; color:#333; font-size: 14px; line-height: 1.2; margin:0 50px 0 0;}
+
+.btn {padding:5px 15px; background-color: #595959; font-size: 16px; border-radius: 8px; 
+			font-family: "Open Sans", Arial, helvetica, sans-serif; color:#fff; outline:0; border:0; margin: 0; }
+.btn:hover { cursor: pointer;}
+.btn-delete {padding:2px 5px; font-size: 14px; margin-bottom: 5px;}
+
+table {border-spacing:0 !important; table-layout: fixed; white-space: nowrap;}
+td {margin:0; white-space: nowrap; text-overflow: ellipsis;}
+tr {margin:0; white-space: nowrap; text-overflow: ellipsis;}
+
+
+#form-table .settings-page td {padding-bottom: 30px; vertical-align: top;}
+#settings-form .settings-page .field {margin-top:5px;}
+#settings-form .settings-page .message-area {margin-right:20px;}
+
+#current-settings {width:800px; margin: 0 0 50px;}
+#current-settings tr {}
+#current-settings td {padding: 5px 0 5px 10px; font-family: Arial, helvetica, sans-serif; font-size: 14px; width: 300px; border-bottom: 1px solid #eee;
+        overflow:hidden; 
+        white-space:nowrap; 
+        text-overflow: ellipsis;
+}
+
+#current-settings th {background-color: #666; color:#fff; font-weight: normal; font-size: 14px; text-align: left; padding: 2px 0 3px 10px;}
+.col1 {background-color: #f7f7f7;}
+#room-id {width:25px;}
+#current-settings .delete-head {background-color:transparent; width: 70px;}
+#current-settings td {}
+
+
+/* Create Rooms Style */
+
+#btn-create {margin-top: 16px;}
+
+#form-table .view-create-rooms td {padding-bottom: 20px;}
+
+#current-rooms .btn-delete {margin: auto; display: block; }
+
+
+#current-rooms {width:800px; margin-top: 50px;}
+#current-rooms tr {}
+#current-rooms td {padding: 5px 0 5px 10px; font-family: Arial, helvetica, sans-serif; font-size: 14px; width: 300px; border-bottom: 1px solid #eee;
+        overflow:hidden; 
+        white-space:nowrap; 
+        text-overflow: ellipsis;
+}
+#current-rooms th {background-color: #666; color:#fff; font-weight: normal; font-size: 14px; text-align: left; padding: 2px 0 3px 10px;}
+.col1 {background-color: #f7f7f7;}
+#room-id {width:25px;}
+#current-rooms .delete-head {background-color:transparent; width: 70px;}
+#current-rooms td {}
+
+#btn-save {padding:2px 5px; font-size: 14px; margin-bottom: 5px; margin: auto; display: block;}
+
+
+/*  View Delete Orders Style */
+
+#table-all-orders {max-height:500px; overflow: scroll;}
+.orders-table {width:800px; margin: 0 0 80px 0px;}
+.orders-table tr {}
+.orders-table td {padding: 5px 0 5px 10px; font-family: Arial, helvetica, sans-serif; font-size: 14px; width: 300px; border-bottom: 1px solid #eee;
+        overflow:hidden; 
+        white-space:nowrap; 
+        text-overflow: ellipsis;
+}
+.orders-table th {background-color: rgba(89, 89, 89, 0.65); color:#fff; font-weight: normal; font-size: 14px; text-align: left; padding: 2px 0 3px 10px;}
+.orders-table th.button-head {width:70px; padding:5px; background-color:transparent;}
+.orders-table th.email-head {width:180px;}
+.orders-table .btn-delete { padding: 2px 3px; font-size: 14px; margin-bottom: 5px 0;  min-width: 50px;}
+
+
+.col1 {background-color: #f7f7f7;}
+.col2 {background-color: #ececec;}
+
+#table-all-orders td:hover {
+  position: relative;
+}
+#table-all-orders td[alt]:hover:after{
+  content: attr(alt);
+  padding: 4px 8px;
+  color: #fff;
+  font-size:12px;
+  border: 2px solid #fff;
+  background-color: #666;
+  position: absolute;
+  left: -50px;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 999999;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#filters {width:800px; position: relative; display: inline-block; margin-bottom: 10px;}
+
+#search-cont .label {margin: 0 10px 0 0;}
+#search-cont .field, #table-all-orders .field {margin-right:3px; margin-top:5px;}
+
+#search-cont {display: inline-block; margin: 0 0 0 274px; vertical-align: bottom;}
+#btn-go {font-size:16px; padding: 0 10px; margin: 0; display: inline-block;}
+
+#btn-save {padding:2px 5px; font-size: 14px; margin-bottom: 5px; margin: auto; display: block;}

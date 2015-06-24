@@ -1,0 +1,162 @@
+
+h1, .hostel-plugin-title-1 {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#595959; font-size: 26px; line-height: 1.2; margin: 0 0 50px 0px; font-weight: normal;}
+
+h3, .hostel-plugin-title-2 {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#333; font-size: 20px; line-height: 1.2; margin: 30px 0 20px 0px; font-weight: normal;}
+
+
+#interface-container {width: 90%; position: relative;  margin-top: 40px; margin-left: 5%; line-height: 100%; }
+  
+
+#interface-container table {border-spacing:0 !important; table-layout: fixed; white-space: nowrap; font-family: "Open Sans", Arial, helvetica, sans-serif; border-collapse: separate;}
+#interface-container td, #interface-container tr {margin:0; white-space: nowrap; text-overflow: ellipsis; vertical-align: middle; border:0; outline:0;}
+
+
+#interface-container td:hover {
+  position: relative;
+}
+#interface-container td[alt]:hover:after{
+  content: attr(alt);
+  padding: 4px 8px;
+  color: #fff;
+  font-size:12px;
+  border: 2px solid #fff;
+  background-color: #666;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  white-space: nowrap;
+  z-index: 999999;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+/* Calendar Nav */
+
+#nav-cont {position: relative; margin: 0 0 0 50px;}
+
+#interface-container table.nav-table {margin:0; width: 100%;}
+#interface-container table.nav-table[button]:hover {text-decoration: underline;}
+#interface-container table#year-nav-table {margin-bottom:30px;}
+#interface-container table#year-nav-table td {margin:0; padding:0; outline:0; border:0;}
+#interface-container table#year-nav-table tr#year-nav-row {height:23px; background-color: rgba(89, 89, 89, 0.13);}
+#interface-container table#year-nav-table td.month-nav {font-family: arial, helvetica, sans-serif; font-size: 14px; color:#595959; width:30px; text-align: center; padding: 0 6px;}
+#interface-container table#year-nav-table td.month-nav:hover {cursor: pointer; text-decoration: underline;}
+
+#interface-container table#year-nav-table td#dec-cell {margin-right:60px;}
+#interface-container table#year-nav-table td#next-year {}
+
+.triangle-left {width: 0; height: 0; border-style: solid; border-width: 8px 13.9px 8px 0;  margin: 0 0 -2px 6px; border-color: transparent #333 transparent transparent; display: inline-block;}
+.triangle-right {width: 0; height: 0; border-style: solid; border-width: 8px 0 8px 13.9px;   margin: 0 6px -2px 0; border-color: transparent transparent transparent #333; display: inline-block; float: right;}
+
+
+#month-nav-table {}
+#month-nav-table td {margin:0; padding:0; outline:0; border:0;}
+#month-nav-table tr#months-nav-row {height:30px;}
+#month-nav-table tr#months-nav-row td.triangle-left, #month-nav-table tr#months-nav-row td.triangle-right {width:1px;}
+
+#month-title-cont {position:relative; display: block; height:40px;}
+.month-title {position:relative; display: block;}
+#first-month-title {margin-left: 50px; position: absolute; left:0px;}
+#second-month-title { position: absolute; right:0px;}
+.month-span {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#2980B9; font-size: 24px; font-weight: 200; width:100%; text-align: center; display: block; margin-bottom:10px; z-index: 1;}
+.btn-month {font-size:14px; font-family: arial, helvetica, sans-serif; color:#595959; background-color: transparent; border:0; outline:0; z-index: 10; }
+.btn-month:hover {cursor: pointer; text-decoration: underline;}
+.btn-month-left {margin: 0;}
+.btn-month-right { margin: 0; float: right;}
+
+
+
+#calendar-table-cont {width:100%; overflow-x: scroll; padding-bottom: 15px; z-index: 9;}
+#calendar-table-cont::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+#calendar-table-cont::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6); 
+}
+ 
+#calendar-table-cont::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 9px rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.1);
+}
+
+#calendar-table {width: 750px;}
+#calendar-table thead {}
+#calendar-table #dates-row {}
+#calendar-table td {width:25px; padding:0; margin:0; outline:0; border:0; }
+
+#calendar-table tr.row-cont {background-color:#666; height: 25px;}
+#calendar-table #dates-left {width:50px;}
+
+#calendar-table td.room-title-cell {width:150px; border-right:1px solid #666; text-align: center;}
+#calendar-table td.room-name-cell {}
+#calendar-table .room-name { font-family: "Open Sans", Arial, helvetica, sans-serif; color:#fff; font-size: 15px;}
+#calendar-table td.room-beds-cell {}
+
+#calendar-table td.bed-title-cell {font-size:12px; font-family:Verdana, Geneva, sans-serif; color:#666; text-align: right; padding-right: 6px; border-bottom:1px solid #bbb;}
+#calendar-table td.bed-cont { border:0 !important;border-bottom:1px solid #fff;}
+
+#calendar-table td.bed-cell {height:18px; border-right:1px solid #bbb; border-bottom:1px solid #bbb;
+background: rgb(242,246,248); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(247,247,247,1) 44%, rgba(234,234,234,1) 54%, rgba(222,226,211,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,246,248,1)), color-stop(44%,rgba(247,247,247,1)), color-stop(54%,rgba(234,234,234,1)), color-stop(100%,rgba(222,226,211,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(247,247,247,1) 44%,rgba(234,234,234,1) 54%,rgba(222,226,211,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(247,247,247,1) 44%,rgba(234,234,234,1) 54%,rgba(222,226,211,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(247,247,247,1) 44%,rgba(234,234,234,1) 54%,rgba(222,226,211,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(242,246,248,1) 0%,rgba(247,247,247,1) 44%,rgba(234,234,234,1) 54%,rgba(222,226,211,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#dee2d3',GradientType=0 ); /* IE6-9 */
+}
+
+#calendar-table td.ui-selecting  { background: #F1C40F; }
+#calendar-table td.ui-selected { background: #999; color: white; opacity: 0.8;}
+
+#calendar-table td.date-cell {height:32px; background-color:#2980B9; opacity: 0.8; border-right:1px solid #fff; 
+  font-size:14px; font-family: "Open Sans", Verdana, Geneva, sans-serif; color:#fff; text-align:center; font-weight: 300;}
+#calendar-table .days {font-size:10px;}
+#calendar-table td.month-border {border-right:1px solid #66f;}
+
+
+#interface-container td.disabled {
+  background-color:#2980B9; 
+  border-right:1px solid #bbb; 
+  border-bottom:1px solid #bbb;
+}
+
+
+#legend-table {width:90%; margin: 20px 0 10px 80px;}
+#legend-table td {width:30px; font-size: 13px; padding:0;}
+#legend-table td.legend-cell {width:220px;}
+#legend-table #legend-row {padding-top: 10px;}
+
+#hostel-cal-booking-form {width:335px; position: relative; display: inline-block; margin-right: 40px;}
+#hostel-cal-booking-form p {font-family: Arial, helvetica, sans-serif; color:#333; font-size: 14px; line-height: 1.2; margin: 0 0 20px 0px; padding:0;}
+#hostel-cal-booking-form .field {position:absolute; right:0px; border-radius: 0; border:1px solid #aaa;}
+#hostel-cal-booking-form .message-area {position:relative; margin-top:5px; border-radius: 0; border:1px solid #aaa;}
+
+.btn {background-color: #595959; border-radius: 5px; font-family: "Open Sans", Arial, helvetica, sans-serif; color:#fff; outline:0; border:0; margin: 0;}
+.btn:hover { cursor: pointer;}
+.btn-booking {font-size:16px; padding:5px 15px; position: absolute; bottom: -34px; right:0px; border-radius:8px; background-color: #2980B9;}
+
+
+#addbooking-cont {margin: 0 0 20px 0;}
+
+#div-summary {position: relative; display: inline-block; vertical-align: top; margin: -5px 0 0 0; min-height:110px; overflow: visible;}
+#table-summary {width:430px;}
+#table-summary td {font-family: Arial, helvetica, sans-serif; font-size: 14px;}
+#table-summary tr {border-spacing: 0 40px;}
+#row-summary-title {background-color: #d9d9d9; height:30px;}
+#table-summary td.cell-room {width:120px; padding: 0 15px 0 20px;}
+#table-summary td.cell-beds {width:60px;}
+#table-summary td.cell-nights {width:60px;}
+#table-summary td.cell-price {width:90px;}
+#table-summary td.cell-delete {width:40px;}
+#table-summary .btn-delete {background-color: #595959; color:#333; border-radius: 5px; border:0; outline: 0; margin-top:1px; padding: 0 3px; font-size: 14px;}
+
+
+#table-summary tfoot {padding-top:20px;}
+#table-summary .btn-total {padding:2px 5px; font-size: 14px; background-color: #595959; border-radius: 8px; 
+      font-family: "Open Sans", Arial, helvetica, sans-serif; color:#fff; outline:0; border:0; margin: 10px 0 10px 12px;}
+#table-summary .btn-total:hover { cursor: pointer;}
+#table-summary .totalprice {font-weight:bold; font-size: 15px;}
