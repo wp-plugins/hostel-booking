@@ -43,7 +43,7 @@ No Questions as yet but be sure to go to http://plugin.hostelbooked.com if you h
  
 1. **Hostel Booking Calendar Interface** - This will display the next two months worth of bookings for every room!
 2. **Customer Booking Calendar** - This is what your guests will see on your website.
-3. **Settings** - Almost no setup require just fill in these options in seconds.
+3. **Settings** - Almost no setup required, just fill in these options in seconds.
 4. **Rooms** - Add the information about each room and you are ready to go!
  
 == Changelog ==
