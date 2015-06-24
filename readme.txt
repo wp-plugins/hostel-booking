@@ -4,11 +4,11 @@ Donate link: http://plugin.hostelbooked.com
 Tags: comments, spam
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 4.3
+Stable tag: 4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
-The short description is shown below the featured image
+Receive bookings and organise all of your reservations from an easy to use calendar interface. Fully integrates into any wordpress site.
  
 == Description ==
 Hostel Booking is designed for the unique reservation requirements of a hostel. It is the only wordpress plugin that allows guests to book BEDS over multiple days over multiple rooms in just one booking. It is also the only plugin that allows you to see all of your bookings in one calendar - see our screenshots for a better understanding!
