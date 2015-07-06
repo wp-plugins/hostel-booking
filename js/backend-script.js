@@ -36,7 +36,7 @@ function hbook_defineDatesVars() {
 	} else {
 		hbGlob.daysNextMonth = hbook_daysInMonth(hbGlob.monthNow + 1, hbGlob.yearNow);
 		hbGlob.secondMonth = hbGlob.monthNow + 1;
-		hbGlob.secondYear = hbGlob.yearNow;
+		hbGlob.secondYear = hbGlob.yearNow + 1;
 	};
 
 	hbGlob.allBookings = {};
@@ -120,7 +120,16 @@ function hbook_createDatesRow() {
 	jQuery(secondMonthTitle).css({
 		width: secondMonthWidth + "px"
 	});
-	secondMonthTitle.innerHTML = "<span class='month-span'>" + hbGlob.monthNames[hbGlob.today.getMonth() + 1] + "</span>";
+
+	var secondMonthName;
+	if (hbGlob.today.getMonth() == 11) {
+		secondMonthName = hbGlob.monthNames[0];
+	} else {
+		secondMonthName = hbGlob.monthNames[hbGlob.today.getMonth() + 1];
+	}
+
+	secondMonthTitle.innerHTML = "<span class='month-span'>" + secondMonthName + "</span>";
+
 
 	var dateRow = document.getElementById("dates-row");
 
@@ -327,7 +336,9 @@ function hbook_sendBooking(frontBack) {
 			"action": 'process_booking',
 			"allBookings": hbGlob.allBookings,
 			"currentYear": hbGlob.yearNow,
+			"secondYear": hbGlob.secondYear,
 			"currentMonth": hbGlob.monthNow,
+			"secondMonth": hbGlob.secondMonth,
 			"formData": formData,
 			"price": hbGlob.grandTotal,
 			"pending": frontBack
@@ -342,6 +353,20 @@ function hbook_sendBooking(frontBack) {
 
 }
 
+function hbook_fetchBookings() {
+	 jQuery.ajax({
+     url: ajaxurl,
+     type: 'post',
+     data: {"currentYear" : hbGlob.yearNow, "secondYear" : hbGlob.secondYear, "currentMonth" : hbGlob.monthNow, "secondMonth" : hbGlob.secondMonth, "action" : 'fetch_bookings'},
+     success: function(data) {
+
+          window.hbGlob.reservations = JSON.parse(data);
+
+          hbook_addBookings();
+
+     }
+  });  
+}
 
 function hbook_summaryRow(name) {
 

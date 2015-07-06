@@ -328,7 +328,9 @@ function hbook_sendBooking(frontBack) {
 			"action": 'process_booking',
 			"allBookings": hbGlob.allBookings,
 			"currentYear": hbGlob.yearNow,
+			"secondYear": hbGlob.secondYear,
 			"currentMonth": hbGlob.monthNow,
+			"secondMonth": hbGlob.secondMonth,
 			"formData": formData,
 			"price": hbGlob.grandTotal,
 			"pending": frontBack

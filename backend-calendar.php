@@ -191,21 +191,27 @@ if ($current_month == 11) {
   };
 
 
-// Get records for the current month and store in array $current_resv
-$current_resv = $wpdb->get_results("SELECT year, month, dates, room, pending, booking_ref FROM wp_hostel_booking_resv WHERE year = $current_year AND (month = $current_month OR month = $second_month)", ARRAY_A); 
+
+if($second_month == 0) {
+    $resv_sql = "SELECT year, month, dates, room, pending, booking_ref  FROM " . $wpdb->prefix . "hostel_booking_resv WHERE (year = $current_year AND month = $current_month) OR (year = $second_year AND month = $second_month)";
+} else {
+    $resv_sql = "SELECT year, month, dates, room, pending, booking_ref  FROM " . $wpdb->prefix . "hostel_booking_resv WHERE year = $current_year AND (month = $current_month OR month = $second_month)";
+}
+
+// $resv_sql = "SELECT year, month, dates, room, pending, booking_ref  FROM " . $wpdb->prefix . "hostel_booking_resv WHERE (year = $current_year OR $second_year) AND (month = $current_month OR month = $second_month)";
+$current_resv = $wpdb->get_results($resv_sql);
 
 
    $json_response = array();
     
-    foreach ($current_resv as $row1) {
-        
+    foreach($current_resv as $row1) {
 
-        $row_array['dates'] = explode(",", $row1['dates']);
-        $row_array['room'] = $row1['room'];
-        $row_array['pending'] = $row1['pending'];
-        $row_array['booking_ref'] = $row1['booking_ref'];
-        $row_array['month'] = $row1['month'];
-        $row_array['year'] = $row1['year'];
+        $row_array['dates'] = explode(",", $row1->dates);
+        $row_array['room'] = $row1->room;
+        $row_array['pending'] = $row1->pending;
+        $row_array['booking_ref'] = $row1->booking_ref;
+        $row_array['month'] = $row1->month;
+        $row_array['year'] = $row1->year;
 
         //push the values in the array
         array_push($json_response,$row_array);
@@ -213,13 +219,22 @@ $current_resv = $wpdb->get_results("SELECT year, month, dates, room, pending, bo
 
 
 // Code to get all orders from DB, cross reference and attach to each reservation under a new array named order
-$current_orders = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE year = $current_year AND (month = $current_month OR month = $second_month)", ARRAY_A); 
+
+if($second_month == 0) {
+    $orders_sql = "SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE (year = $current_year AND month = $current_month) OR (year = $second_year AND month = $second_month)";    
+} else {
+    $orders_sql = "SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE year = $current_year AND (month = $current_month OR month = $second_month)";    
+}
+
+// $orders_sql = "SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE year = $current_year AND (month = $current_month OR month = $second_month)";    
+$current_orders = $wpdb->get_results($orders_sql);
+
 
 $orders = array();
     
-    foreach($current_orders as $row1) {
+    foreach ($current_orders as $row1) {
 
-        $orders_array[$row1['booking_ref']] = array("name" => $row1['name'], "email" => $row1['email'], "phone" => $row1['phone'], "booking_ref" => $row1['booking_ref']);
+        $orders_array[$row1->booking_ref] = array("name" => $row1->name, "email" => $row1->email, "phone" => $row1->phone, "booking_ref" => $row1->booking_ref);
         //push the values in the array
         array_push($orders,$orders_array);
     }
@@ -244,8 +259,7 @@ $orders = array();
         }
     } 
 
-
-  $reservations = json_encode($json_response, JSON_NUMERIC_CHECK);
+$reservations = json_encode($json_response, JSON_NUMERIC_CHECK);
 
 
     $current_rooms = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "hostel_booking_rooms", ARRAY_A); 
@@ -327,18 +341,7 @@ function hbook_toMonth(month, year) {
   hbook_createRooms();
   hbook_grabCont();
 
-  jQuery.ajax({
-     url: ajaxurl,
-     type: 'post',
-     data: {"currentYear" : hbGlob.yearNow, "currentMonth" : hbGlob.monthNow, "secondMonth" : hbGlob.secondMonth, "action" : 'fetch_bookings'},
-     success: function(data) {
-
-          window.hbGlob.reservations = JSON.parse(data);
-
-          hbook_addBookings();
-
-     }
-  });  
+  hbook_fetchBookings();
 }
 
 

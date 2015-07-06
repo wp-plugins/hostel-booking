@@ -6,13 +6,20 @@ add_action( 'wp_ajax_nopriv_fetch_bookings', 'hbook_fetch_bookings' );
 function hbook_fetch_bookings() {
 
     $current_year = intval( $_POST["currentYear"] );
+    $second_year = intval( $_POST["secondYear"] );
     $current_month = intval( $_POST["currentMonth"] );
     $second_month = intval( $_POST["secondMonth"] );
 
 global $wpdb;
 
 
-$resv_sql = "SELECT year, month, dates, room, pending, booking_ref  FROM " . $wpdb->prefix . "hostel_booking_resv WHERE year = $current_year AND (month = $current_month OR month = $second_month)";    
+if($second_month == 0) {
+    $resv_sql = "SELECT year, month, dates, room, pending, booking_ref  FROM " . $wpdb->prefix . "hostel_booking_resv WHERE (year = $current_year AND month = $current_month) OR (year = $second_year AND month = $second_month)";
+} else {
+    $resv_sql = "SELECT year, month, dates, room, pending, booking_ref  FROM " . $wpdb->prefix . "hostel_booking_resv WHERE year = $current_year AND (month = $current_month OR month = $second_month)";
+}
+
+// $resv_sql = "SELECT year, month, dates, room, pending, booking_ref  FROM " . $wpdb->prefix . "hostel_booking_resv WHERE (year = $current_year OR $second_year) AND (month = $current_month OR month = $second_month)";
 $current_resv = $wpdb->get_results($resv_sql);
 
 
@@ -34,7 +41,13 @@ $current_resv = $wpdb->get_results($resv_sql);
 
 // Code to get all orders from DB, cross reference and attach to each reservation under a new array named order
 
-$orders_sql = "SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE year = $current_year AND (month = $current_month OR month = $second_month)";    
+if($second_month == 0) {
+    $orders_sql = "SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE (year = $current_year AND month = $current_month) OR (year = $second_year AND month = $second_month)";    
+} else {
+    $orders_sql = "SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE year = $current_year AND (month = $current_month OR month = $second_month)";    
+}
+
+// $orders_sql = "SELECT * FROM " . $wpdb->prefix . "hostel_booking_orders WHERE year = $current_year AND (month = $current_month OR month = $second_month)";    
 $current_orders = $wpdb->get_results($orders_sql);
 
 

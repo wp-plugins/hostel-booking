@@ -18,7 +18,9 @@ function hbook_process_booking() {
 
     $price = floatval( $_POST["price"] );
     $year = intval( $_POST["currentYear"] );
+    $secondYear = intval( $_POST["secondYear"] );
     $monthNow = intval( $_POST["currentMonth"] );
+    $secondMonth = intval( $_POST["secondMonth"] );
 
 
 $name = sanitize_text_field( $_POST['formData']['name'] );
@@ -105,16 +107,22 @@ foreach($dates_beds as $month => $rooms) {
 
 foreach($roomStrings as $monthn => $room) {
 	$current_month = $roomStrings[$monthn];
+
+	if ($monthn == 0 && $secondMonth == 0) {
+		$correct_year = $secondYear; 
+	} else { $correct_year = $year; }
+
 	foreach ($current_month as $room => $dates) {
 
+
 		$wpdb->insert( $wpdb->prefix . 'hostel_booking_resv',
-			array('year' => $year, 'month' => $monthn, 'dates' => $dates, 'room' => $room, 'booking_ref' => $booking_ref, 'pending' => $pending),
+			array('year' => $correct_year, 'month' => $monthn, 'dates' => $dates, 'room' => $room, 'booking_ref' => $booking_ref, 'pending' => $pending),
 			array('%d', '%d', '%s', '%s', '%s', '%d'));
 	}
 }
 
 		$wpdb->insert( $wpdb->prefix . 'hostel_booking_orders',
-			array('name' => $name, 'email' => $email, 'phone' => $phone, 'price' => $price, 'booking_ref' => $booking_ref, 'year' => $year, 'month' => $monthn, 'pending' => $pending ),
+			array('name' => $name, 'email' => $email, 'phone' => $phone, 'price' => $price, 'booking_ref' => $booking_ref, 'year' => $correct_year, 'month' => $monthn, 'pending' => $pending ),
 			array('%s', '%s', '%s', '%d', '%s', '%d', '%d', '%d'));
 
 }
