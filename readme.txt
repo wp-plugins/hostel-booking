@@ -28,15 +28,15 @@ See a more detailed description here: [plugin.hostelbooked.com](http://plugin.ho
 
 Receive bookings the new way with an interactive calendar. The old method of selecting depart and arrive dates, which room and how many people simply doesn’t work for hostel owners.
 
-With a calendar display of the vacancies customers can see all available beds in every room without having to query the website, and can then create a booking across multiple rooms with multiple beds.
+With a calendar display of the vacancies customers can see all available beds in every room without having to query the website, they can then create a booking across multiple rooms with multiple beds.
 
 ###Manage All Bookings From One Screen###
 
-Elegant and simple design creates a very intuitive user experience. The system can be understood in minutes and is fool proof to use.
+Our elegant and simple design creates a very intuitive user experience. The system can be understood in minutes and is fool proof to use.
 
-Bookings are seen, confirmed and created in the same place so that when your staff are creating bookings new bookings they can see them in context with all other reservations.
+Bookings are seen, confirmed and created in the same place so that when your staff are creating new bookings they can see them in context with all the other reservations.
 
-This makes the system incredibly easy to use and removes potential confusion or over-booking.
+This makes the system incredibly easy to use and removes potential confusion, even more importantly it eliminates the possibility of over-booking.
 
 == Installation ==
 
