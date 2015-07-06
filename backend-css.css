@@ -68,7 +68,7 @@ h3, .hostel-plugin-title-2 {font-family: "Open Sans", Arial, helvetica, sans-ser
 #first-month-title {margin-left: 50px; position: absolute; left:0px;}
 #second-month-title { position: absolute; right:0px;}
 .month-span {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#2980B9; font-size: 24px; font-weight: 200; width:100%; text-align: center; display: block; margin-bottom:10px; z-index: 1;}
-.btn-month {font-size:14px; font-family: arial, helvetica, sans-serif; color:#595959; background-color: transparent; border:0; outline:0; z-index: 10; }
+.btn-month {font-size:14px; font-family: arial, helvetica, sans-serif; color:#595959; background-color: transparent; border:0; outline:0; z-index: 10;   padding: 1px 8px;}
 .btn-month:hover {cursor: pointer; text-decoration: underline;}
 .btn-month-left {margin: 0;}
 .btn-month-right { margin: 0; float: right;}
