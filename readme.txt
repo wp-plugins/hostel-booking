@@ -1,19 +1,43 @@
 === Plugin Name ===
 Contributors: Phr0sty
 Donate link: http://plugin.hostelbooked.com
-Tags: hostel, hostel booking, hostel reservations, booking, reservations, beds
+Tags: comments, spam
 Requires at least: 3.0.1
 Tested up to: 4.2.2
-Stable tag: 4.2
+Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
-Receive bookings and organise all of your reservations from an easy to use calendar interface. Fully integrates into any wordpress site.
+The short description is shown below the featured image
  
 == Description ==
 Hostel Booking is designed for the unique reservation requirements of a hostel. It is the only wordpress plugin that allows guests to book BEDS over multiple days over multiple rooms in just one booking. It is also the only plugin that allows you to see all of your bookings in one calendar - see our screenshots for a better understanding!
 
- 
+###Features###
+
+- Install and setup within 5 minutes
+- Receive bookings immediately
+- All your bookings in one calendar
+- Overbooking not possible
+- Geared for a 100% occupancy rate
+- Book across multiple rooms and dates in one booking
+
+See a more detailed description here: [plugin.hostelbooked.com](http://plugin.hostelbooked.com "plugin.hostelbooked.com") 
+
+###Hostel Specific Booking Engine###
+
+Receive bookings the new way with an interactive calendar. The old method of selecting depart and arrive dates, which room and how many people simply doesn’t work for hostel owners.
+
+With a calendar display of the vacancies customers can see all available beds in every room without having to query the website, and can then create a booking across multiple rooms with multiple beds.
+
+###Manage All Bookings From One Screen###
+
+Elegant and simple design creates a very intuitive user experience. The system can be understood in minutes and is fool proof to use.
+
+Bookings are seen, confirmed and created in the same place so that when your staff are creating bookings new bookings they can see them in context with all other reservations.
+
+This makes the system incredibly easy to use and removes potential confusion or over-booking.
+
 == Installation ==
 
 Upload from the WordPress Dashboard
@@ -43,7 +67,7 @@ No Questions as yet but be sure to go to http://plugin.hostelbooked.com if you h
  
 1. **Hostel Booking Calendar Interface** - This will display the next two months worth of bookings for every room!
 2. **Customer Booking Calendar** - This is what your guests will see on your website.
-3. **Settings** - Almost no setup required, just fill in these options in seconds.
+3. **Settings** - Almost no setup require just fill in these options in seconds.
 4. **Rooms** - Add the information about each room and you are ready to go!
  
 == Changelog ==
