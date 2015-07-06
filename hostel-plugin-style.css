@@ -4,10 +4,10 @@ h1, .hostel-plugin-title-1 {font-family: "Open Sans", Arial, helvetica, sans-ser
 h3, .hostel-plugin-title-2 {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#333; font-size: 20px; line-height: 1.2; margin: 30px 0 20px 0px; font-weight: normal;}
 
 
-#interface-container {width: 90%; position: relative;  margin-top: 40px; margin-left: 5%; line-height: 100%; }
+#interface-container {width: 100%; overflow-x: scroll; overflow-y:visible; position: relative;   padding-bottom: 20px; line-height: 100%; }
   
 
-#interface-container table {border-spacing:0 !important; table-layout: fixed; white-space: nowrap; font-family: "Open Sans", Arial, helvetica, sans-serif; border-collapse: separate;}
+#interface-container table {border:0; outline:0; border-spacing:0 !important; table-layout: fixed; white-space: nowrap; font-family: "Open Sans", Arial, helvetica, sans-serif; border-collapse: separate;}
 #interface-container td, #interface-container tr {margin:0; white-space: nowrap; text-overflow: ellipsis; vertical-align: middle; border:0; outline:0;}
 
 
@@ -31,6 +31,10 @@ h3, .hostel-plugin-title-2 {font-family: "Open Sans", Arial, helvetica, sans-ser
   border-radius: 5px;
 }
 
+#interface-container button {
+  font-weight: normal;
+  text-transform: none;
+}
 
 /* Calendar Nav */
 
@@ -41,8 +45,9 @@ h3, .hostel-plugin-title-2 {font-family: "Open Sans", Arial, helvetica, sans-ser
 #interface-container table#year-nav-table {margin-bottom:30px;}
 #interface-container table#year-nav-table td {margin:0; padding:0; outline:0; border:0;}
 #interface-container table#year-nav-table tr#year-nav-row {height:23px; background-color: rgba(89, 89, 89, 0.13);}
-#interface-container table#year-nav-table td.month-nav {font-family: arial, helvetica, sans-serif; font-size: 14px; color:#595959; width:30px; text-align: center; padding: 0 6px;}
+#interface-container table#year-nav-table td.month-nav {width:5%; font-family: arial, helvetica, sans-serif; font-size: 14px; color:#595959; text-align: center; padding: 0 6px;}
 #interface-container table#year-nav-table td.month-nav:hover {cursor: pointer; text-decoration: underline;}
+#interface-container table#year-nav-table .month-nav-div {width:30px;}
 
 #interface-container table#year-nav-table td#dec-cell {margin-right:60px;}
 #interface-container table#year-nav-table td#next-year {}
@@ -132,8 +137,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
 
 #hostel-cal-booking-form {width:335px; position: relative; display: inline-block; margin-right: 40px;}
 #hostel-cal-booking-form p {font-family: Arial, helvetica, sans-serif; color:#333; font-size: 14px; line-height: 1.2; margin: 0 0 20px 0px; padding:0;}
-#hostel-cal-booking-form .field {position:absolute; right:0px; border-radius: 0; border:1px solid #aaa;}
-#hostel-cal-booking-form .message-area {position:relative; margin-top:5px; border-radius: 0; border:1px solid #aaa;}
+#hostel-cal-booking-form .field {position:absolute; right:0px; width:170px; padding:1px 0; margin:0; font-size: 14px; font-family:Arial, helvetica, sans-serif; }
+#hostel-cal-booking-form .message-area {position:relative; margin-top:5px; border-radius: 0; border:1px solid #aaa; font-family: Arial, helvetica, sans-serif; color:#333; font-size: 14px; line-height: 1.2;}
 
 .btn {background-color: #595959; border-radius: 5px; font-family: "Open Sans", Arial, helvetica, sans-serif; color:#fff; outline:0; border:0; margin: 0;}
 .btn:hover { cursor: pointer;}
