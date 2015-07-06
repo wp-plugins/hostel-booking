@@ -114,7 +114,7 @@ foreach($roomStrings as $monthn => $room) {
 }
 
 		$wpdb->insert( $wpdb->prefix . 'hostel_booking_orders',
-			array('name' => $name, 'email' => $email, 'phone' => $phone, 'price' => $price, 'booking_ref' => $booking_ref, 'year' => $year, 'month' => $monthNow, 'pending' => $pending ),
+			array('name' => $name, 'email' => $email, 'phone' => $phone, 'price' => $price, 'booking_ref' => $booking_ref, 'year' => $year, 'month' => $monthn, 'pending' => $pending ),
 			array('%s', '%s', '%s', '%d', '%s', '%d', '%d', '%d'));
 
 }

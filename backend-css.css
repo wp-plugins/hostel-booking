@@ -7,7 +7,7 @@ h1, .hostel-plugin-title-1 {font-family: "Open Sans", Arial, helvetica, sans-ser
 h3, .hostel-plugin-title-2 {font-family: "Open Sans", Arial, helvetica, sans-serif; color:#333; font-size: 20px; line-height: 1.2; margin: 30px 0 20px 0px; font-weight: normal;}
 
 
-#interface-container {width: auto; position: relative;  margin-top: 40px; padding-left: 5%; padding-right: 5%; display: inline-block; }
+#interface-container {width: auto; position: relative;  margin-top: 40px; padding-left: 5%; padding-right: 5%; overflow-x: scroll; overflow-y:visible; padding-bottom: 20px; display: inline-block; }
   
 
 #interface-container table {border-spacing:0 !important; table-layout: fixed; white-space: nowrap; font-family: "Open Sans", Arial, helvetica, sans-serif; border-collapse: separate;}
